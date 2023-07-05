@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enem - Provas E Gabaritos</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="manifest" href="/manifest.json">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+      html, body {
+        width: 100%;
+        min-width: 100%;
+        height:100%;
+      }
+
+      body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="text-center">
+      <a href="/years/2022/index.html" class="btn btn-outline-dark btn-light mb-2 w-100">
+        <h1 class="text-center mt-3">ENEM</h1>
+        <h4 class="text-center mb-3">PROVAS E GABARITOS</h4>
+      </a>
+    </div>
+    <div class="alert-success text-center mt-2 mb-2">
+      <a href="https://play.google.com/store/apps/details?id=com.InstaApps.ENEMProvaseGabaritosComentadosVIP" class="text-black h6" target="_blank">
+        <small>APOIE A NOSSA CAUSA COM APENAS R$2,99!</small>
+        <br/>
+        <small>Clique aqui e compre a versão paga, livre-se das propagandas e ajude a manter o aplicativo online.</small>
+      </a>
+    </div>
+  
+    <div class="row" style="max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 70px !important;">
+
+      <div class="col-12 mb-3 text-center">
+        <h3 id="ad-download-notice">Para liberar o PDF clique na propaganda abaixo ou aguarde <span id="timer"></span>!</h3>
+      </div>
+    </div>
+              
+    <script>
+      var monitor = setInterval(function(){
+        var elem = document.activeElement;
+        if(elem && elem.tagName == 'IFRAME'){
+          clearInterval(monitor);
+          $("#ads2 a").each(function() {
+            this.click()
+          });
+          $( "#ad-download-notice" ).delay(1000).fadeOut("slow", function() {
+            $('.btn-download').attr("disabled", false);
+          });
+        }
+      }, 100);
+
+      function delay(milliseconds){
+        return new Promise(resolve => {
+          setTimeout(resolve, milliseconds);
+        });
+      }
+
+      window.onload = async function () {
+        let duration = 20;
+        while(duration > 0){
+          text = duration < 10 ? ("0" + duration.toString() + " segundos") : (duration.toString() + " segundos");
+          document.querySelector('#timer').textContent = text;
+          await delay(1000);
+          duration -= 1;
+        }
+        document.querySelector('#timer').textContent = "0 segundos";
+        $( "#ad-download-notice" ).delay(1000).fadeOut("slow", function() {
+          $('.btn-download').attr("disabled", false);
+        });
+      };
+    </script>
+  </body>
+  
+  <footer class="text-center w-100 bg-black" style="position: fixed; bottom: 0;">
+
+    <div class="text-center w-100 bg-black">
+      <div id="ads" style="max-width: 100vw; max-height: 70px; overflow: auto;">
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '6de89eaf91145ced8b503900d7b4893e',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.profitabledisplaynetwork.com/6de89eaf91145ced8b503900d7b4893e/invoke.js"></script>
+      </div>
+      <div id="ads2" style="display: none;">
+        <script async="async" data-cfasync="false" src="https://pl19376957.highrevenuegate.com/73e5bdab49c9eda95695a81ca83e7c7f/invoke.js"></script>
+        <script async="async" data-cfasync="false" src="https://pl19376957.highrevenuegate.com/73e5bdab49c9eda95695a81ca83e7c7f/invoke.js"></script>
+        <script async="async" data-cfasync="false" src="https://pl19376957.highrevenuegate.com/73e5bdab49c9eda95695a81ca83e7c7f/invoke.js"></script>
+        <div id="container-73e5bdab49c9eda95695a81ca83e7c7f"></div>
+      
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '89cedb7e6c91fe916ef9daf6764f20b9',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.profitabledisplaynetwork.com/89cedb7e6c91fe916ef9daf6764f20b9/invoke.js"></script>
+      
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '8839bd0d5b97da18bd7c5bf3d9792c39',
+            'format' : 'iframe',
+            'height' : 300,
+            'width' : 160,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.profitabledisplaynetwork.com/8839bd0d5b97da18bd7c5bf3d9792c39/invoke.js"></script>
+      
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '9d97dab5995407f4305986bdbdf40874',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.profitabledisplaynetwork.com/9d97dab5995407f4305986bdbdf40874/invoke.js"></script>
+      
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '9c86adecf7a40492eb147a031fc09aa1',
+            'format' : 'iframe',
+            'height' : 600,
+            'width' : 160,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.profitabledisplaynetwork.com/9c86adecf7a40492eb147a031fc09aa1/invoke.js"></script>
+      </div>      
+    </div>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVY1992VDQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NVY1992VDQ');
+    </script>
+  </footer>
+</html>
