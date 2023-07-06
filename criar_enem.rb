@@ -103,28 +103,28 @@ Dir.mkdir("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/gabaritos/2") if pr
 if prova_dois.downcase == 'y'
   # cria a página de provas da edição
   file_text = read_file('layout/enems_show.html')
-  text_to_add = "#{content}\n      <div class=\"col-6 mt-3 mb-3 text-center\">\n        <form class=\"button_to\" method=\"get\" action=\"1/index.html\">\n          <button class=\"btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2\" style=\"min-width: 90%;\" disabled=\"disabled\" type=\"submit\">\n            <span style=\"font-size: 1rem; white-space: nowrap;\">PROVA 1º DIA</span>\n          </button>\n        </form>\n      </div>\n      <div class=\"col-6 mt-3 mb-3 text-center\">\n        <form class=\"button_to\" method=\"get\" action=\"2/index.html\">\n          <button class=\"btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2\" style=\"min-width: 90%;\" disabled=\"disabled\" type=\"submit\">\n            <span style=\"font-size: 1rem; white-space: nowrap;\">PROVA 2º DIA</span>\n          </button>\n        </form>\n      </div>"
+  text_to_add = "#{content}\n      <div class=\"col-6 mt-3 mb-3 text-center\">\n        <form class=\"button_to\" method=\"get\" action=\"1/index.html\">\n          <button class=\"btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2\" style=\"min-width: 90%;\" type=\"submit\">\n            <span style=\"font-size: 1rem; white-space: nowrap;\">PROVA 1º DIA</span>\n          </button>\n        </form>\n      </div>\n      <div class=\"col-6 mt-3 mb-3 text-center\">\n        <form class=\"button_to\" method=\"get\" action=\"2/index.html\">\n          <button class=\"btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2\" style=\"min-width: 90%;\" type=\"submit\">\n            <span style=\"font-size: 1rem; white-space: nowrap;\">PROVA 2º DIA</span>\n          </button>\n        </form>\n      </div>"
   file_text.sub!(content, text_to_add)
   file_text.sub!(footer, back_button.sub('LINK', '../index.html'))
   write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/provas/index.html", file_text)
 
   # cria a página de gabaritos da edição
   file_text = read_file('layout/enems_show.html')
-  text_to_add = "#{content}\n      <div class=\"col-6 mt-3 mb-3 text-center\">\n        <form class=\"button_to\" method=\"get\" action=\"1/index.html\">\n          <button class=\"btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2\" style=\"min-width: 90%;\" disabled=\"disabled\" type=\"submit\">\n            <span style=\"font-size: 1rem; white-space: nowrap;\">GABARITO 1º DIA</span>\n          </button>\n        </form>\n      </div>\n      <div class=\"col-6 mt-3 mb-3 text-center\">\n        <form class=\"button_to\" method=\"get\" action=\"2/index.html\">\n          <button class=\"btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2\" style=\"min-width: 90%;\" disabled=\"disabled\" type=\"submit\">\n            <span style=\"font-size: 1rem; white-space: nowrap;\">GABARITO 2º DIA</span>\n          </button>\n        </form>\n      </div>"
+  text_to_add = "#{content}\n      <div class=\"col-6 mt-3 mb-3 text-center\">\n        <form class=\"button_to\" method=\"get\" action=\"1/index.html\">\n          <button class=\"btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2\" style=\"min-width: 90%;\" type=\"submit\">\n            <span style=\"font-size: 1rem; white-space: nowrap;\">GABARITO 1º DIA</span>\n          </button>\n        </form>\n      </div>\n      <div class=\"col-6 mt-3 mb-3 text-center\">\n        <form class=\"button_to\" method=\"get\" action=\"2/index.html\">\n          <button class=\"btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2\" style=\"min-width: 90%;\" type=\"submit\">\n            <span style=\"font-size: 1rem; white-space: nowrap;\">GABARITO 2º DIA</span>\n          </button>\n        </form>\n      </div>"
   file_text.sub!(content, text_to_add)
   file_text.sub!(footer, back_button.sub('LINK', '../index.html'))
   write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/gabaritos/index.html", file_text)
 else
   # cria a página de provas da edição
   file_text = read_file('layout/enems_show.html')
-  text_to_add = "#{content}\n      <div class=\"col-6 mt-3 mb-3 text-center\">\n        <form class=\"button_to\" method=\"get\" action=\"1/index.html\">\n          <button class=\"btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2\" style=\"min-width: 90%;\" disabled=\"disabled\" type=\"submit\">\n            <span style=\"font-size: 1rem; white-space: nowrap;\">PROVA 1º DIA</span>\n          </button>\n        </form>\n      </div>"
+  text_to_add = "#{content}\n      <div class=\"col-6 mt-3 mb-3 text-center\">\n        <form class=\"button_to\" method=\"get\" action=\"1/index.html\">\n          <button class=\"btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2\" style=\"min-width: 90%;\" type=\"submit\">\n            <span style=\"font-size: 1rem; white-space: nowrap;\">PROVA 1º DIA</span>\n          </button>\n        </form>\n      </div>"
   file_text.sub!(content, text_to_add)
   file_text.sub!(footer, back_button.sub('LINK', '../index.html'))
   write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/provas/index.html", file_text)
 
   # cria a página de gabaritos da edição
   file_text = read_file('layout/enems_show.html')
-  text_to_add = "#{content}\n      <div class=\"col-6 mt-3 mb-3 text-center\">\n        <form class=\"button_to\" method=\"get\" action=\"1/index.html\">\n          <button class=\"btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2\" style=\"min-width: 90%;\" disabled=\"disabled\" type=\"submit\">\n            <span style=\"font-size: 1rem; white-space: nowrap;\">GABARITO 1º DIA</span>\n          </button>\n        </form>\n      </div>"
+  text_to_add = "#{content}\n      <div class=\"col-6 mt-3 mb-3 text-center\">\n        <form class=\"button_to\" method=\"get\" action=\"1/index.html\">\n          <button class=\"btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2\" style=\"min-width: 90%;\" type=\"submit\">\n            <span style=\"font-size: 1rem; white-space: nowrap;\">GABARITO 1º DIA</span>\n          </button>\n        </form>\n      </div>"
   file_text.sub!(content, text_to_add)
   file_text.sub!(footer, back_button.sub('LINK', '../index.html'))
   write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/gabaritos/index.html", file_text)

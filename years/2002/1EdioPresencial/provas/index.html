@@ -43,62 +43,16 @@
         <h4 class="text-center mb-3">PROVAS E GABARITOS</h4>
       </a>
     </div>
-    <div class="alert-success text-center mt-2 mb-2">
-      <a href="https://play.google.com/store/apps/details?id=com.InstaApps.ENEMProvaseGabaritosComentadosVIP" class="text-black h6" target="_blank">
-        <small>APOIE A NOSSA CAUSA COM APENAS R$2,99!</small>
-        <br/>
-        <small>Clique aqui e compre a versão paga, livre-se das propagandas e ajude a manter o app online.</small>
-      </a>
-    </div>
   
     <div class="row" style="max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 60px !important;">
       <div class="col-6 mt-3 mb-3 text-center">
         <form class="button_to" method="get" action="1/index.html">
-          <button class="btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2" style="min-width: 90%;" disabled="disabled" type="submit">
+          <button class="btn btn-lg btn-outline-dark btn-light btn-download p-2 mb-2" style="min-width: 90%;" type="submit">
             <span style="font-size: 1rem; white-space: nowrap;">PROVA 1º DIA</span>
           </button>
         </form>
       </div>
-
-      <div class="col-12 mb-3 text-center">
-        <h3 id="ad-download-notice">Para liberar o PDF clique na propaganda abaixo ou aguarde <span id="timer"></span>!</h3>
-      </div>
     </div>
-              
-    <script>
-      var monitor = setInterval(function(){
-        var elem = document.activeElement;
-        if(elem && elem.tagName == 'IFRAME'){
-          clearInterval(monitor);
-          $("#ads2 a").each(function() {
-            this.click()
-          });
-          $( "#ad-download-notice" ).delay(1000).fadeOut("slow", function() {
-            $('.btn-download').attr("disabled", false);
-          });
-        }
-      }, 100);
-
-      function delay(milliseconds){
-        return new Promise(resolve => {
-          setTimeout(resolve, milliseconds);
-        });
-      }
-
-      window.onload = async function () {
-        let duration = 20;
-        while(duration > 0){
-          text = duration < 10 ? ("0" + duration.toString() + " segundos") : (duration.toString() + " segundos");
-          document.querySelector('#timer').textContent = text;
-          await delay(1000);
-          duration -= 1;
-        }
-        document.querySelector('#timer').textContent = "0 segundos";
-        $( "#ad-download-notice" ).delay(1000).fadeOut("slow", function() {
-          $('.btn-download').attr("disabled", false);
-        });
-      };
-    </script>
   </body>
   
   <footer class="text-center w-100 bg-black" style="position: fixed; bottom: 0;">
