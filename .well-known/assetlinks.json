@@ -1,0 +1,6 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target" : { "namespace": "android_app", "package_name": "com.InstaApps.ENEMProvaseGabaritosComentados",
+                   "sha256_cert_fingerprints": ["D8:A5:73:2D:46:22:43:4B:55:21:B6:18:43:51:4B:0C:6A:6F:75:80:75:F1:D9:74:E5:AF:E7:27:7B:89:95:6B"] }
+    }
+]
