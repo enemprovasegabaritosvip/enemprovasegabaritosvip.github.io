@@ -28,7 +28,7 @@ puts 'Digite a edição do enem que deseja criar: '
 edition = gets.chomp
 
 puts 'Digite o link da primeira prova: '
-link_prova_um = gets.chomp.sub(/\/view.*/, '/preview')
+link_prova_um = gets.chomp.sub(/\/view.*/, '/preview').sub(/\?.*/, '')
 
 puts 'Existe uma segunda prova? (y/n)'
 prova_dois = gets.chomp
@@ -40,19 +40,19 @@ end
 
 if prova_dois.downcase == 'y'
   puts 'Digite o link da segunda prova: '
-  link_prova_dois = gets.chomp.sub(/\/view.*/, '/preview')
+  link_prova_dois = gets.chomp.sub(/\/view.*/, '/preview').sub(/\?.*/, '')
 end
 
 puts 'Digite o link do primeiro gabarito: '
-link_gabarito_um = gets.chomp.sub(/\/view.*/, '/preview')
+link_gabarito_um = gets.chomp.sub(/\/view.*/, '/preview').sub(/\?.*/, '')
 
 if prova_dois.downcase == 'y'
   puts 'Digite o link do segundo gabarito: '
-  link_gabarito_dois = gets.chomp.sub(/\/view.*/, '/preview')
+  link_gabarito_dois = gets.chomp.sub(/\/view.*/, '/preview').sub(/\?.*/, '')
 end
 
 
-content = '<div class="row" style="max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 70px !important;">'
+content = '<div class="row" style="max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 60px !important;">'
 footer = '<footer class="text-center w-100 bg-black" style="position: fixed; bottom: 0;">'
 back_button = "#{footer}\n    <a href=\"LINK\" class=\"btn btn-lg btn-outline-dark btn-light p-2 w-100 mb-2\" style=\"min-width: 100%; white-space: nowrap;\"><i class=\"fas fa-arrow-left\"></i> Voltar</a>"
 
@@ -132,7 +132,7 @@ end
 
 # cria a página para visualizar a prova 1
 file_text = read_file('layout/tests_show.html')
-text_to_add = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 127px !important;\">\n      <iframe src=\"#{link_prova_um}\" style=\"height: 100%; width: 100%;\"></iframe>"
+text_to_add = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 60px !important;\">\n      <iframe src=\"#{link_prova_um}\" style=\"height: 100%; width: 100%;\"></iframe>"
 file_text.sub!(content, text_to_add)
 file_text.sub!(footer, back_button.sub('LINK', '../index.html'))
 write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/provas/1/index.html", file_text)
@@ -140,7 +140,7 @@ write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/provas/1/index.htm
 if prova_dois.downcase == 'y'
   # cria a página para visualizar a prova 2
   file_text = read_file('layout/tests_show.html')
-  text_to_add = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 127px !important;\">\n      <iframe src=\"#{link_prova_dois}\" style=\"height: 100%; width: 100%;\"></iframe>"
+  text_to_add = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 60px !important;\">\n      <iframe src=\"#{link_prova_dois}\" style=\"height: 100%; width: 100%;\"></iframe>"
   file_text.sub!(content, text_to_add)
   file_text.sub!(footer, back_button.sub('LINK', '../index.html'))
   write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/provas/2/index.html", file_text)
@@ -148,7 +148,7 @@ end
 
 # cria a página para visualizar o gabarito 1
 file_text = read_file('layout/tests_show.html')
-text_to_add = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 127px !important;\">\n      <iframe src=\"#{link_gabarito_um}\" style=\"height: 100%; width: 100%;\"></iframe>"
+text_to_add = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 60px !important;\">\n      <iframe src=\"#{link_gabarito_um}\" style=\"height: 100%; width: 100%;\"></iframe>"
 file_text.sub!(content, text_to_add)
 file_text.sub!(footer, back_button.sub('LINK', '../index.html'))
 write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/gabaritos/1/index.html", file_text)
@@ -156,7 +156,7 @@ write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/gabaritos/1/index.
 if prova_dois.downcase == 'y'
   # cria a página para visualizar o gabarito 2
   file_text = read_file('layout/tests_show.html')
-  text_to_add = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 127px !important;\">\n      <iframe src=\"#{link_gabarito_dois}\" style=\"height: 100%; width: 100%;\"></iframe>"
+  text_to_add = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 60px !important;\">\n      <iframe src=\"#{link_gabarito_dois}\" style=\"height: 100%; width: 100%;\"></iframe>"
   file_text.sub!(content, text_to_add)
   file_text.sub!(footer, back_button.sub('LINK', '../index.html'))
   write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/gabaritos/2/index.html", file_text)
