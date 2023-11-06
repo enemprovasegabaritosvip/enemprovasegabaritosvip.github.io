@@ -130,9 +130,11 @@ else
   write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/gabaritos/index.html", file_text)
 end
 
+content_tests_show = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 57px !important;\">"
+
 # cria a página para visualizar a prova 1
 file_text = read_file('layout/tests_show.html')
-text_to_add = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 60px !important;\">\n      <iframe src=\"#{link_prova_um}\" style=\"height: 100%; width: 100%;\"></iframe>"
+text_to_add = "#{content_tests_show}\n      <iframe src=\"#{link_prova_um}\" style=\"height: 100%; width: 100%;\"></iframe>"
 file_text.sub!(content, text_to_add)
 file_text.sub!(footer, back_button.sub('LINK', '../index.html'))
 write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/provas/1/index.html", file_text)
@@ -140,7 +142,7 @@ write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/provas/1/index.htm
 if prova_dois.downcase == 'y'
   # cria a página para visualizar a prova 2
   file_text = read_file('layout/tests_show.html')
-  text_to_add = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 60px !important;\">\n      <iframe src=\"#{link_prova_dois}\" style=\"height: 100%; width: 100%;\"></iframe>"
+  text_to_add = "#{content_tests_show}\n      <iframe src=\"#{link_prova_dois}\" style=\"height: 100%; width: 100%;\"></iframe>"
   file_text.sub!(content, text_to_add)
   file_text.sub!(footer, back_button.sub('LINK', '../index.html'))
   write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/provas/2/index.html", file_text)
@@ -148,7 +150,7 @@ end
 
 # cria a página para visualizar o gabarito 1
 file_text = read_file('layout/tests_show.html')
-text_to_add = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 60px !important;\">\n      <iframe src=\"#{link_gabarito_um}\" style=\"height: 100%; width: 100%;\"></iframe>"
+text_to_add = "#{content_tests_show}\n      <iframe src=\"#{link_gabarito_um}\" style=\"height: 100%; width: 100%;\"></iframe>"
 file_text.sub!(content, text_to_add)
 file_text.sub!(footer, back_button.sub('LINK', '../index.html'))
 write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/gabaritos/1/index.html", file_text)
@@ -156,7 +158,7 @@ write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/gabaritos/1/index.
 if prova_dois.downcase == 'y'
   # cria a página para visualizar o gabarito 2
   file_text = read_file('layout/tests_show.html')
-  text_to_add = "<div class=\"w-100 h-100\" style=\"max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 60px !important;\">\n      <iframe src=\"#{link_gabarito_dois}\" style=\"height: 100%; width: 100%;\"></iframe>"
+  text_to_add = "#{content_tests_show}\n      <iframe src=\"#{link_gabarito_dois}\" style=\"height: 100%; width: 100%;\"></iframe>"
   file_text.sub!(content, text_to_add)
   file_text.sub!(footer, back_button.sub('LINK', '../index.html'))
   write_file("years/#{year}/#{edition.gsub(/[^0-9A-Za-z]/, '')}/gabaritos/2/index.html", file_text)
