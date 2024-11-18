@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enem - Provas E Gabaritos</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="manifest" href="https://enemprovasegabaritosvip.github.io/manifest.json">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+      html, body {
+        width: 100%;
+        min-width: 100%;
+        height:100%;
+      }
+
+      body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="w-100 h-100" style="max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 57px !important;">
+      <iframe src="https://drive.google.com/file/d/1h_vxm4shz5v6tANMFAqme9ZxDAILGmXD/preview" style="height: 100%; width: 100%;"></iframe>
+    </div>
+  </body>
+  
+  <footer class="text-center w-100 bg-black" style="position: fixed; bottom: 0;">
+    <a href="../index.html" class="btn btn-lg btn-outline-dark btn-light p-2 w-100 mb-2" style="min-width: 100%; white-space: nowrap;"><i class="fas fa-arrow-left"></i> Voltar</a>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVY1992VDQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NVY1992VDQ');
+    </script>
+    <script>
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('https://enemprovasegabaritosvip.github.io/service-worker.js').then(registration => {
+          var serviceWorker;
+          if (registration.installing) {
+            serviceWorker = registration.installing;
+          } else if (registration.waiting) {
+            serviceWorker = registration.waiting;
+          } else if (registration.active) {
+            serviceWorker = registration.active;
+          }
+        }).catch(registrationError => {
+          console.log('Service worker registration failed: ', registrationError);
+        });
+      });
+    </script>
+  </footer>
+</html>
