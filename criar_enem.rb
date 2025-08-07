@@ -51,8 +51,7 @@ if prova_dois.downcase == 'y'
   link_gabarito_dois = gets.chomp.sub(/\/view.*/, '/preview').sub(/\?.*/, '')
 end
 
-
-content = '<div class="row" style="max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important;">'
+content = '<div class="row" style="max-width: 100% !important; margin-left: 0px !important; margin-right: 0px !important; padding-bottom: 67px !important;">'
 footer = '<footer class="text-center w-100 bg-black" style="position: fixed; bottom: 0;">'
 back_button = "#{footer}\n    <a href=\"LINK\" class=\"btn btn-lg btn-outline-dark btn-light p-2 w-100 mb-2\" style=\"min-width: 100%; white-space: nowrap;\"><i class=\"fas fa-arrow-left\"></i> Voltar</a>"
 
