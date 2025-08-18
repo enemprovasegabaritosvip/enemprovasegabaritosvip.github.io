@@ -7,9 +7,9 @@ O aplicativo ENEM - Provas e Gabaritos Comentados utiliza de permissoes do smart
 O aplicativo ENEM - Provas e Gabaritos Comentados nao usa ou transfere quaisquer informações pessoais dos usuarios, todas e quaisquer informacoes guardadas no aplicativos, sao guardados offline somente no smartphone, entao as informacoes sao de total responsabilidade do usuario.
 
 
-As provas divulgadas pelo aplicativo s�o as provas oficiais disponibilizadas pelo INEP através do site oficial: 
+As provas divulgadas pelo aplicativo são as provas oficiais disponibilizadas pelo INEP através do site oficial: 
 http://portal.inep.gov.br/
 
 
-Os gabaritos comentados divulgados pelo aplicativos s�o gabaritos divulgados pelo Curso Objetivo através do site:
+Os gabaritos comentados divulgados pelo aplicativos são gabaritos divulgados pelo Curso Objetivo através do site:
 http://www.curso-objetivo.br/
