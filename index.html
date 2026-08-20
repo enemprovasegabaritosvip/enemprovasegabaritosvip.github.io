@@ -33,6 +33,19 @@
           background-position: 0% 50%;
         }
       }
+
+      @keyframes blink {
+        0%, 50% {
+          opacity: 1;
+        }
+        51%, 100% {
+          opacity: 0;
+        }
+      }
+
+      .blink-trophy {
+        animation: blink 1s step-start infinite;
+      }
     </style>
   </head>
 
@@ -45,7 +58,7 @@
     </div>
     <div class="alert-success text-center mt-2 mb-2">
       <a href="https://simuladosenem.com" class="text-black h6" target="_blank">
-        <small>A forma mais inteligente de estudar para o ENEM chegou!🏆</small>
+        <small>A forma mais inteligente de estudar para o ENEM chegou!<span class="blink-trophy">🏆</span></small>
         <br/>
         <small>Simulados ilimitados e análises por área em tempo real.</small>
       </a>
